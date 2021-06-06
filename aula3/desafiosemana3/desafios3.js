@@ -226,29 +226,38 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 
+
 pessoa.apresentacao = function(){
-    let genero
-    if(pessoa.sexo === 'Masculino'){
-        genero = 'o'
-    }else{
-        genero = 'a'
-    }
+    // let genero
+    // if(pessoa.sexo === 'Masculino'){
+    //     genero = 'o'
+    // }else{
+    //     genero = 'a'
+    // }
 
-    let idadePluralOuSingular
-    if(pessoa.idade <2 && pessoa.idade >= 0) {
-        idadePluralOuSingular = 'ano'
-    }if(pessoa.idade >=1){
-        idadePluralOuSingular = 'anos'
-    }else{
-        console.log('Insigra uma idade válida')
-    }
+    // let idadePluralOuSingular
+    // if(pessoa.idade <2 && pessoa.idade >= 0) {
+    //     idadePluralOuSingular = 'ano'
+    // }if(pessoa.idade >=1){
+    //     idadePluralOuSingular = 'anos'
+    // }else{
+    //     console.log('Insigra uma idade válida')
+    // }
 
-    let caminhouPluralOuSingular
-    if(pessoa.caminhouQuantosMetros >1){
-        caminhouPluralOuSingular = 'metros'
-    }else{
-        caminhouPluralOuSingular = 'metro'
-    }
+    // let caminhouPluralOuSingular
+    // if(pessoa.caminhouQuantosMetros >1){
+    //     caminhouPluralOuSingular = 'metros'
+    // }else{
+    //     caminhouPluralOuSingular = 'metro'
+    // }
+    pessoa.sexo = 'Masculino'
+    pessoa.idade = 0
+    pessoa.caminhouQuantosMetros = 0
+    
+
+    const genero = pessoa.sexo === 'Masculino' ? 'o' : 'a'
+    const idadePluralOuSingular = pessoa.idade <2 && pessoa.idade >=0 ? 'ano' : 'anos'
+    const caminhouPluralOuSingular = pessoa.caminhouQuantosMetros >=2 ? 'metros' : 'metro' 
     
 
     return `Olá, eu sou ${genero} ${pessoa.NomeCompleto()}, tenho ${pessoa.idade} ${idadePluralOuSingular}, e ${pessoa.altura} de altura, meu peso é ${pessoa.peso} KG e, só hoje, eu já caminhei ${pessoa.caminhouQuantosMetros} ${caminhouPluralOuSingular}! `;
