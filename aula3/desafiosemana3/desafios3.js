@@ -228,11 +228,9 @@ correta, de acordo com os dados inseridos no objeto.
 
 
 pessoa.apresentacao = function(){
-    // let genero
+    // let genero = a
     // if(pessoa.sexo === 'Masculino'){
     //     genero = 'o'
-    // }else{
-    //     genero = 'a'
     // }
 
     // let idadePluralOuSingular
@@ -255,7 +253,7 @@ pessoa.apresentacao = function(){
     pessoa.caminhouQuantosMetros = 0
     
 
-    const genero = pessoa.sexo === 'Masculino' ? 'o' : 'a'
+    const genero = pessoa.sexo === 'Masculino' ? 'o' : pessoa.sexo === 'Feminino' ? 'a' : 'trans'
     const idadePluralOuSingular = pessoa.idade <2 && pessoa.idade >=0 ? 'ano' : 'anos'
     const caminhouPluralOuSingular = pessoa.caminhouQuantosMetros >=2 ? 'metros' : 'metro' 
     
