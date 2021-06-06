@@ -6,7 +6,7 @@ function meusArgumentos2(a, b, c) {
   } else if (a !== undefined && b !== undefined && c !== undefined) {
     return (a + b) / c;
   } else if (a === undefined && b === undefined && c == undefined) {
-    return false;                         0,
+    return false;                         
   } else {
   return null;
   }
