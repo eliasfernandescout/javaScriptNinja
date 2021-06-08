@@ -1,1 +1,1 @@
-console.log(!!'eliasfernandes')
+console.log(!!0)
