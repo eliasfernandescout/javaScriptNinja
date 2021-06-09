@@ -140,24 +140,36 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
+console.log('#####################################################################################')
+
+
 
 carro.adicionarPessoas = function (numeroPessoas) {
     var totalPessoas = carro.quantidadePessoas + numeroPessoas;
   
     if (carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {
-      return 'O carro já está lotado!';
+      return console.log('O carro está lotado')
     }
   
     if (totalPessoas > carro.assentos) {
       var quantasPessoasCabem =  carro.assentos - carro.quantidadePessoas;
       var pluralOuSingular = quantasPessoasCabem === 1 ? ' pessoa' : ' pessoas';
-      return 'Só cabem mais ' + quantasPessoasCabem + pluralOuSingular + '!';
+      return console.log('Só cabem mais ' + quantasPessoasCabem + pluralOuSingular + '!') 
     }
   
     carro.quantidadePessoas += numeroPessoas;
   
-    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+    return console.log('Já temos ' + carro.quantidadePessoas + ' pessoas no carro!') 
   };
+
+  console.log(carro.adicionarPessoas(5))
+  console.log(carro.quantidadePessoas)
+
+
+
+
+  
+console.log('#####################################################################################')
 
 
 /*
@@ -165,40 +177,3 @@ Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
 adicionando comentários _inline_ ao lado com o valor retornado, se o método
 retornar algum valor.
-
-Qual a cor atual do carro?
-*/
-
-
-// Mude a cor do carro para vermelho.
-
-
-// E agora, qual a cor do carro?
-
-
-// Mude a cor do carro para verde musgo.
-
-
-// E agora, qual a cor do carro?
-
-
-// Qual a marca e modelo do carro?
-
-
-// Adicione 2 pessoas no carro.
-
-
-// Adicione mais 4 pessoas no carro.
-
-
-// Faça o carro encher.
-
-
-// Tire 4 pessoas do carro.
-
-
-// Adicione 10 pessoas no carro.
-
-
-// Quantas pessoas temos no carro?
-
