@@ -9,11 +9,11 @@ function returnObj() {
     cor: "Azul",
     marca: "Fiat",
     modelo: function () {
-      return "Fiat";
+      return "Punto";
     },
   });
 }
 
-propriedade = returnObj().marca
+propriedade = returnObj().modelo()
 
 console.log(propriedade)
