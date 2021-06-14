@@ -6,6 +6,9 @@ e imprima o nome desse campeonato no console.
 */
 // ?
 
+var championship = "campeonatoBrasileiro";
+console.log(championship);
+
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
 Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
@@ -13,8 +16,9 @@ estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
 // ?
+var teams = ["Botafogo", "Vasco", "Fluminense", "Inter", "Gremio"];
 
-console.log( 'Times que estão participando do campeonato:', teams );
+console.log("Times que estão participando do campeonato:", teams);
 
 /*
 Crie uma função chamada `showTeamPosition` com as seguintes características:
@@ -33,12 +37,28 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 // ?
+console.log(
+  "####################################################################"
+);
+
+function showTeamPosition(position) {
+  if (position < 1 || position > 5) {
+    return "Não temos a informação do time que está nessa posição";
+  } else {
+    return `O time que está em ${position}º lugar é o ${teams[position - 1]}.`;
+  }
+}
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
 // ?
+console.log(showTeamPosition(1));
+console.log(showTeamPosition(2));
+console.log(showTeamPosition(3));
+console.log(showTeamPosition(4));
+console.log(showTeamPosition(8));
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
@@ -46,6 +66,16 @@ repetição "while".
 */
 // ?
 
+var numero = 20;
+
+while (numero < 30) {
+  numero++;
+  console.log(numero);
+}
+
+console.log(
+  "-------------------------------------------------------------------"
+);
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
     - A função recebe uma cor por parâmetro, do tipo string. Exemplo: "red";
@@ -60,7 +90,61 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
 */
 // ?
 
+function convertToHex(color) {
+  cores = {
+    preto: {
+      hexadecimal: "#000000",
+    },
+    azul: {
+      hexadecimal: "#0000FF",
+    },
+    turquesa: {
+      hexadecimal: "#20B2AA",
+    },
+    verde: {
+      hexadecimal: "#9ACD32",
+    },
+    roxo: {
+      hexadecimal: "#A020F0",
+    },
+  };
+
+  switch (color) {
+    case "preto":
+      return `A cor ${color} em Hexadecimal é ${cores.preto.hexadecimal}`;
+
+    case "azul":
+      return `A cor ${color} em Hexadecimal é ${cores.azul.hexadecimal}`;
+
+    case "turquesa":
+      return `A cor ${color} em Hexadecimal é ${cores.turquesa.hexadecimal}`;
+
+    case "verde":
+      return `A cor ${color} em Hexadecimal é ${cores.verde.hexadecimal}`;
+
+    case "roxo":
+      return `A cor ${color} em Hexadecimal é ${cores.roxo.hexadecimal}`;
+
+    default:
+      return `Não temos o equivalente Hexademical para a cor ${color}`;
+  }
+}
+
+console.log(convertToHex("roxo"));
+
+console.log(
+  "-------------------------------------------------------------------"
+);
+
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
 // ?
+
+console.log(convertToHex("preto"));
+console.log(convertToHex("azul"));
+console.log(convertToHex("turquesa"));
+console.log(convertToHex("verde"));
+console.log(convertToHex("roxo"));
+console.log(convertToHex("laranja"));
+console.log(convertToHex("vermelho"));
