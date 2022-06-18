@@ -28,3 +28,17 @@ switch(number){
 }
 
 console.log('Fim do switch')
+
+/*TAMBEM E POSSIVEL UTILIZAR O BREAK EM UMA INSTRUCAO FOR */
+
+for(let dinheiro = 0; dinheiro < 10; dinheiro++ ){
+   dinheiro === 5 ? console.log('Dinheiro = a 5') : console.log('Dinheiro diferente de 5')
+
+    if(dinheiro === 5){
+        break
+    }
+    console.log(dinheiro)
+
+}
+
+console.log('Fim do FOR')
