@@ -1,4 +1,4 @@
-let x = 8;
+let x = 4;
 let y = 7;
 
 if (x > 5) {

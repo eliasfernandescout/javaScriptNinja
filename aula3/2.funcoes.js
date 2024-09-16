@@ -5,6 +5,7 @@ console.log(myvar2())
 
 //QUANDO ATRIBUIMOS A PROPRIEDADE DE UM OBJETO UMA FUNÇÃO CHAMAMOS DE MÉTODO
 console.log("-----------------------------------------");
+
 let pessoa ={
     nome: "Dante",
     idade: 86,
